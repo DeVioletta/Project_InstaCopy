@@ -1,0 +1,167 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* *{
+    outline: 1px solid blueviolet;
+} */
+
+body{
+    display:flex;
+    justify-content: center;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.container{
+    width:100vw;
+    min-height: 100vh;
+    max-width: 468px; 
+    box-shadow: 0 0 5px grey;
+    padding:0 10px 40px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding:0.5rem 0.3rem;
+    box-shadow: 0 0 2px grey;
+    width: calc(100% + 10px);
+    position: relative;
+    left: -10px;
+    margin-bottom:10px ;
+}
+
+#logo{
+    width:20vmin;
+    object-fit: contain;
+    max-width: 100px;
+}
+
+#avatar{
+    width:12vmin;
+    height: 12vmin;
+    border-radius: 50%;
+    max-width: 42px;
+    max-height: 42px;
+    aspect-ratio: 1/1;
+}
+
+/* ============== */
+
+.profile-box{
+    display: flex;
+    padding:0.5rem;
+    gap:min(2vw, 15px)
+}
+
+.pp{
+    width:12%;
+    max-width: 42px;
+    height: 12%;
+    aspect-ratio: 1/1;
+    max-height: 42px;
+    border-radius: 50%;
+}
+
+.name-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name-box p{
+    margin: 0;
+
+}
+
+.name-box .name{
+    font-weight: 700;
+    font-size: min(4.5vw, 0.875rem);
+}
+
+.name-box .address{
+    font-weight: 400;
+    font-size: min(3.75vw,0.75rem);
+}
+
+.post{
+    width: 100%;
+    aspect-ratio:4/5;
+    object-fit: contain;
+    border: 1px solid rgb(182, 182, 182);
+}
+
+/* =============== */
+.user-act{
+    display: flex;
+    gap:min(2vw, 12px);
+    padding:0.4rem 0.2rem;
+}
+
+.user-act i{
+    font-size: min(7.3vw, 24px);
+}
+
+.user-act i:hover{
+    scale:1.2;
+}
+
+.like-fill-icon{
+    color:#E1306C;
+}
+
+/* =========== */
+.likes{
+    font-weight: 700;
+    margin: 4px auto;
+    font-size: min(4vw, 0.875rem);
+}
+
+.caption-box{
+    font-size:min(4vw, 0.875rem);
+    margin: 0.2rem 0;
+}
+
+.caption-box span{
+    font-weight: 700;
+}
+
+.img-box{
+    position: relative;
+}
+.liked-heart{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: max(8vw, 50px);
+    color:rgb(250, 237, 237);
+}
+
+
+@keyframes liked-heart {
+    0%{
+        font-size: 0;
+        opacity: 0;
+    }    
+    60%{
+        font-size: max(10vw, 80px);
+        opacity: 1;
+    }
+    100%{
+        font-size: max(8vw, 50px);
+        opacity: 0;
+        display: none;
+    }
+}
+
+
